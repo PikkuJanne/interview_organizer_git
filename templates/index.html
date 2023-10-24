@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<p>Interview organizer keeps you on top of your interviews. All information readily available and well organized in one place.</p>
+
+{% if user.is_authenticated %}
+    <div class="button-container">
+        <a href="{% url 'interview_organizer:upcoming' %}"><button class="btn">View Upcoming Interviews</button></a>
+        <a href="{% url 'interview_organizer:new_interview' %}"><button class="btn">Add New Interview</button></a> 
+        <a href="{% url 'interview_organizer:archive' %}"><button class="btn">View Archived Interviews</button></a>
+    </div>
+    <div style="margin-top: 20px;">
+        <a class="delete-account-link" href="{% url 'accounts:delete_account' %}">Delete My Account</a>
+    </div>
+{% endif %}
+{% endblock %}

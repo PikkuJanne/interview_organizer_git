@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>{{ interview.headline }} 
+    <a href="{% url 'interview_organizer:edit_interview' interview.id %}">Edit</a> | 
+    <a href="{% url 'interview_organizer:delete_interview' interview.id %}" class="delete-link">Delete</a>
+</h1>
+<p>Date and Time: {{ interview.datetime|date:"d F Y, H:i" }}</p>
+<p>Place: {{ interview.place }}</p>
+
+<h2>Interviewees</h2>
+<div class="interviewees">
+    {% for interviewee in interviewees %}
+        <p>{{ interviewee }}</p>
+    {% endfor %}
+</div>
+
+<h2>Contact Persons</h2>
+<div class="contact-persons">
+    {% for contact_person in contact_persons %}
+        <p>{{ contact_person }}</p>
+    {% endfor %}
+</div>
+
+<h2>Contact Emails</h2>
+<div class="emails">
+    {% for email in emails %}
+        <p><a href="mailto:{{ email }}">{{ email }}</a></p>
+    {% endfor %}
+</div>
+
+<h2>Contact Phones</h2>
+<div class="phone_numbers">
+    {% for phone_number in phone_numbers %}
+        <p><a href="tel:{{ phone_number }}">{{ phone_number }}</a></p>
+    {% endfor %}
+</div>
+
+<h2>Notes</h2>
+<div class="notes">
+    {% for note in notes %}
+        <p>{{ note }}</p>
+    {% endfor %}
+</div>
+
+<h2>Links</h2>
+<div class="links">
+    {% for link in links %}
+        <p><a href="{{ link }}" target="_blank">{{ link }}</a></p>
+    {% endfor %}
+</div>
+
+<h2>Questions</h2>
+<p><a href="{% url 'interview_organizer:questions' interview.id %}">View Questions</a></p>
+{% endblock %}

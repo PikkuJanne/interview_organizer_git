@@ -1,0 +1,337 @@
+/* Reset some default browser styles */
+body, h1, p, button {
+    margin: 0;
+    padding: 0;
+}
+
+/* Define simple font */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center; 
+}
+
+/* Define header style */
+header {
+    background-color: #f5f5f5;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Define main content style */
+main {
+    padding: 40px 20px;
+    text-align: center; 
+}
+
+/* Define button styles */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: #007BFF;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 12px 20px;
+    transition: background-color 0.3s;
+    width: 220px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Define footer style */
+footer {
+    background-color: #f5f5f5;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Define navigation bar styles */
+nav {
+    margin-top: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    padding: 0;
+    margin: 0;
+    list-style-type: none; 
+}
+
+nav a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.interviewees, .contact-persons, .notes, .links {
+    padding: 0;
+    list-style: none;
+}
+
+.interviewees p, .contact-persons p, .notes p, .links p {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.interview-list {
+    padding: 0;
+    list-style: none;
+}
+
+.interview-item {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-bottom: 1px solid #f5f5f5;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.list-container {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.list-item {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f5f5f5;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-no-list {
+    list-style-type: none;
+}
+
+.form-container {
+    margin: 0 auto;
+    max-width: 975px;
+    padding: 30px;  
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-label {
+    font-weight: bold;
+    margin-bottom: 10px;  
+    display: block;  
+}
+
+.form-field {
+    width: 100%;
+    padding: 10px;  
+    margin-bottom: 10px;  
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.edit-link {
+    margin-left: 10px;
+    font-size: 18px;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.edit-link:hover {
+    text-decoration: underline;
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+}
+
+.form-button {
+    background-color: #007BFF;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.form-button:hover {
+    background-color: #0056b3;
+}
+
+@media screen and (max-width: 600px) {
+    .form-container {
+        padding: 20px;
+    }
+}
+
+.login-status {
+    margin-top: 10px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+}
+
+.auth-container {
+    display: flex;
+    align-items: center;
+}
+
+.login-status a,
+.logout-button {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.login-status a:hover,
+.logout-button:hover {
+    text-decoration: underline;
+}
+
+.logout-form {
+    margin: 0 0 0 10px;
+    padding: 0;
+}
+
+.logout-button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Style for registration form */
+form {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for form labels */
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* Style for form input fields */
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Style for submit button */
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px 40px;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.delete-link {
+    background-color: red;
+    color: white;
+    padding: 5px 5px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 10px;
+}
+
+.delete-link:hover {
+    background-color: darkred;
+}
+
+/* Style for Delete My Account link */
+.delete-account-link {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #d9534f;
+    text-decoration: none;
+}
+
+.delete-account-link:hover {
+    text-decoration: underline;
+}
+
+/* Footer style */
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #f5f5f5;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Specific style for login button */
+.login-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;  
+    font-size: 18px;  
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background-color: #45a049;
+}
+
+/* Specific style for register button */
+.register-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;  
+    font-size: 18px;  
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.register-button:hover {
+    background-color: #45a049;
+}

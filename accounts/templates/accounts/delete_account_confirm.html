@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Are you sure you want to delete your account?</h2>
+    <form method="post">
+        {% csrf_token %}
+        <input type="submit" value="Yes, Delete My Account">
+    </form>
+    <a href="{% url 'interview_organizer:index' %}">No, Don't Delete</a>
+{% endblock %}

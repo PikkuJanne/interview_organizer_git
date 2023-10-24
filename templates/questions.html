@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Questions for: {{ interview.headline }}</h1>
+<a href="{% url 'interview_organizer:interview' interview.id %}">Back to Interview</a>
+{% for question in questions %}
+    <p>{{ question|linebreaks }}</p>
+{% endfor %}
+{% endblock %}
+
+
+
+

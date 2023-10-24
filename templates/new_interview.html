@@ -1,0 +1,32 @@
+
+
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>New Interview</h1>
+  <div class="form-container">
+    <form method="post" class="form-no-list">
+      {% csrf_token %}
+      
+      <div>
+        <label class="form-label" for="{{ form.headline.id_for_label }}">Headline:</label>
+        <input class="form-field" type="text" name="{{ form.headline.name }}" id="{{ form.headline.id_for_label }}" required>
+      </div>
+      
+      <div>
+        <label class="form-label" for="{{ form.datetime.id_for_label }}">Date and Time:</label>
+        <input class="form-field" type="datetime-local" name="{{ form.datetime.name }}" id="{{ form.datetime.id_for_label }}" required>
+      </div>
+      
+      <div>
+        <label class="form-label" for="{{ form.place.id_for_label }}">Place:</label>
+        <input class="form-field" type="text" name="{{ form.place.name }}" id="{{ form.place.id_for_label }}" required>
+      </div>
+      
+      <div>
+        <button type="submit" class="form-button">Add New Interview</button>
+      </div>
+    </form>
+  </div>
+{% endblock %}
+

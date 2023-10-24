@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Organizer</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Interview Organizer</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'interview_organizer:index' %}">Interview Organizer</a></li>
+                <li><a href="{% url 'interview_organizer:upcoming' %}">Upcoming</a></li>
+                <li><a href="{% url 'interview_organizer:archive' %}">Archived</a></li>
+                {% if user.is_authenticated %}
+                    <li>Hello, {{ user.username }}!</li>
+                    <li><a href="{% url 'accounts:logout' %}">Logout</a></li>
+                {% else %}
+                    <li><a href="{% url 'accounts:login' %}">Login</a></li>
+                    <li><a href="{% url 'accounts:register' %}">Register</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock content %}
+    </main>
+    <footer>
+        <p>© 2023 Janne Vuorela | MIT License</p>
+    </footer>
+</body>
+</html>

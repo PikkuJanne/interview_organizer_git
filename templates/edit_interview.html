@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="form-container">
+        <h2>Edit Interview: {{ interview.headline }} <a href="{% url 'interview_organizer:interview' interview.id %}">Back</a></h2>
+        <form method="post">
+            {% csrf_token %}
+            {% for field in form %}
+                <div class="form-label">{{ field.label_tag }}</div>
+                <div class="form-field">{{ field }}</div>
+            {% endfor %}
+            <button class="form-button" type="submit">Save changes</button>
+        </form>
+    </div>
+{% endblock %}
+
