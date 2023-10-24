@@ -19,7 +19,7 @@ Django 4.2.4
 
 Clone the Repository
 
-git clone https://github.com/your-username/interview-organizer.git
+git clone https://github.com/PikkuJanne/interview_organizer_git
 
 cd interview-organizer
 
