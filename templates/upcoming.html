@@ -10,8 +10,6 @@
         <a class="delete-link" href="{% url 'interview_organizer:delete_interview' interview.id %}" onclick="return confirm('Are you sure you want to delete this interview?')">Delete</a><br>
         Date and Time: {{ interview.datetime|date:"d F Y, H:i" }}<br>
         Place: {{ interview.place }}<br>
-        Interviewee(s): {{ interview.interviewees.all|join:", " }}<br>
-        Contact Person(s): {{ interview.contact_persons.all|join:", " }}<br>
     </div>
 {% empty %}
     <p>No upcoming interviews.</p>
